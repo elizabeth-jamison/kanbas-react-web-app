@@ -1,0 +1,20 @@
+.nav-bar-icons {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+}
+
+.nav-bar-links {
+    color: white;
+}
+
+.nav-bar-words {
+    text-align: center;
+}
+
+.list-item {
+    text-decoration: none;
+    color: #C92030; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

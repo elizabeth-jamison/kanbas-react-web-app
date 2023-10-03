@@ -1,0 +1,56 @@
+.list-item {
+    text-decoration: none;
+    color: #C92030; 
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+ .list-nav {
+    position: relative;
+    float: left;
+}
+
+.list {
+    width: 200px;
+    margin: 0px;
+}
+
+.view-icon {
+    margin-top: 5px;
+    color: #6c757d;
+}
+
+.assignment-nav {
+    height: 35px;
+    display: block;
+    padding: .5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 0px;
+}
+
+.list-item-active{
+    text-decoration: none;
+    font-weight: bold;
+    color: black; 
+}
+
+.list .active{
+    border-left: 3px black solid;
+
+}
+
+.assignment-links {
+    text-decoration: none;
+    color: #212529;
+}
+
+.name-header {
+    color: #6c757d;
+    text-align: center;
+    font-style: italic;
+}

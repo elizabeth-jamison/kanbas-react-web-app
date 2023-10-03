@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+    <link href="edit-profile.css" rel="stylesheet"/>
+  </head>
+  <body>
+    
+    <div class="d-flex table-padding">
+      <i class="fas fa-bars fa-2x" style="color: #C92030;"></i>
+      <p class="profile-heading">Elizabeth Jamison's Profile</p>
+    </div>
+    
+    <hr/>
+    <div class="row name">
+     <div class="col">
+       <i class="fa fa-user fa-8x" aria-hidden="true" style="color: grey;"></i> 
+      </div>
+     <div class="col">
+      <a href="edit-profile.html" class="btn " role="button" style="background-color: #f2f0f0">
+            <i class="fas fa-pencil-alt fa-flip-horizontal" style="color: black;"></i>
+            Cancel Editing
+            </a> 
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label input-label"><h6>Name:*</h6></label>
+    <input class="form-control input-field" id="name" placeholder="Elizabeth Jamison">
+  </div>
+
+      <h6 class="h6-format">Pronouns: </h6>
+        <div class="dropdown">
+          <select>
+            <option value="none">None</option>
+          </select>
+        </div>
+      </body>
+      <div class="mb-3">
+        <label for="title" class="form-label input-label"><h6>Title:</h6></label>
+        <input class="form-control input-field" id="title" >
+      </div>
+      <h3>Contact</h3>
+      <p>No registered services, you can add some on the <a href="#" class="links">settings</a> page.</p>
+
+      <div class="mb-3">
+        <label for="bio" class="form-label"><h3>Biography</h3></label>
+        <textarea class="form-control" id="bio" rows="3">Northeastern Computer Science student.</textarea>
+      </div>
+        
+      </label>
+      <h3>Links</h3>
+      
+
+      <table >
+        <thead>
+          <th>Title</th>
+          <th>URL</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label>
+                <input type="text" value="YouTube" />
+                <i class="fas fa-long-arrow-alt-right"></i>
+              </label>
+            </td>  
+            <td>
+              <input type="text" value="https://www.youtube.com"/>
+              <a href="#"><i class="fas fa-times" style="color: #C92030;"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button btn" class="btn cancel btn-sm">Add another link</button>
+      </br>
+      <form action="/Profile/index.html" class="float-end">
+        <button type="button btn" class="btn cancel">Cancel</button>
+        <button type="button btn" class="btn save-profile">Save Profile</button>
+      </form>
+      </form>
+  </body>
+</html>

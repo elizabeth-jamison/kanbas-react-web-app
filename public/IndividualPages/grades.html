@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+        <link href="home.css" rel="stylesheet"/>
+        <link href="grades.css" rel="stylesheet"/>
+
+    </head>
+    <body>
+
+        <nav class="profile-nav" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb profile-nav ">
+              <li class="breadcrumb-item profile-nav"><a class="profile-nav" href="#">
+                <div class="d-flex profile">
+                    <i class="fas fa-bars fa-2x"></i>
+                    <p class="profile-name">CS4550.12631.20410</p>
+                  </div>
+              </a></li>
+              <li class="breadcrumb-item active home-name" aria-current="page">Grades</li>
+            </ol>
+        </nav>
+          <hr/>
+        <div class="import-export">
+          <div class="d-flex float-end float-padding">
+            <div class="btn btn-light button-padding">
+                <i class="fas fa-file-import"></i>
+                Import</div>
+            <div class="dropdown button-padding">
+               <a class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-file-export"></i>                   Export
+               </a>
+            </div>
+            <div class="btn btn-light button-padding"><i class="fas fa-cog"></i></div>
+           </div>
+        </div>  
+       
+        <div class="row">
+           <div class="col ">
+                <label for="students" class="form-label search-labels ">Student Names</label>
+                <input type="text" id="students" class="form-control " placeholder="Search Students"></input>
+            </div>
+            <div class="col">
+                <label for="students" class="form-label search-labels ">Assignment Names</label>
+                <input type="text" id="assignments" class="form-control" placeholder="Search Assignments"></input>
+            </div>
+        </div>
+       
+        <div class="btn btn-light filters">
+            <i class="fas fa-filter"></i>
+            Apply Filters</div>
+
+        <table class="table table-bordered table-striped" >
+       
+            <tbody>
+                <tr>
+                    <td class="student-name">Student Name</td>
+                    <td><p class="table-header">A1 SETUP</p>
+                        <p class="table-header">Out of 100</p>
+                    </td>
+                    <td><p class="table-header">A2 HTML</p>
+                        <p class="table-header">Out of 100</p>
+                    </td>
+                    <td><p class="table-header">A3 CSS</p>
+                        <p class="table-header">Out of 100</p>
+                    </td>
+                    <td><p class="table-header">A4 BOOTSTRAP</p>
+                        <p class="table-header">Out of 100</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="name" >Alice Wonderland</td>
+                    <td>98</td>
+                    <td>89</td>
+                    <td>87</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td class="name" style="color: #C92030;">Princess Leia</td>
+                    <td>98</td>
+                    <td>80</td>
+                    <td>87</td>
+                    <td>86</td>
+                </tr>
+                <tr>
+                    <td class="name">Luke Skywalker</td>
+                    <td>
+                        <input class="form-control form-control-sm input float-start" type="text" value="99"></input>
+                        <i class="fas fa-file-export float-start file"></i>
+
+                    </td>
+                    <td>88</td>
+                    <td>97</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td class="name" style="color: #C92030;">Han Solo</td>
+                    <td>83</td>
+                    <td>
+                        <input class="form-control form-control-sm input float-start" type="text" value="99"></input>
+                        <i class="fas fa-file-export float-start file"></i>
+                    </td>
+                    <td>80</td>
+                    <td>
+                        <input class="form-control form-control-sm input float-start" type="text" value="80"></input>
+                        <i class="fas fa-file-export float-start file"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

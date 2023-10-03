@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+        <link href="home.css" rel="stylesheet"/>
+        <link href="edit-assignment.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <nav class="profile-nav" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb profile-nav ">
+              <li class="breadcrumb-item profile-nav"><a class="profile-nav" href="#">
+                <div class="d-flex profile">
+                    <i class="fas fa-bars fa-2x "></i>
+                    <p class="profile-name">CS4550.12631.20410</p>
+                  </div>
+              </a></li>
+              <li class="breadcrumb-item profile"><a class="assignments" href="#">Assignments</a></li>
+              <li class="breadcrumb-item active home-name" aria-current="page">A1 - HTML</li>
+            </ol>
+        </nav>
+        <hr/>
+        <div class="d-flex float-padding float-end">
+            <i class="fas fa-check-circle publish-icon"></i>
+            <p class="publish"> Publish</p>
+            <div class="btn btn-light button-padding " style="color: #6c757d"><i class="fas fa-ellipsis-v"></i></div>
+           </div>
+            <div class="container">
+                <label class="assn-name" for="assignment-name">Assignment Name</label>
+                <input type="text" class="form-control" id="assignment-name" value="A1 - ENV + HTML"></input>
+
+                <textarea class="form-control description">This is the assignment description.</textarea>
+                
+                <label  for="points">Points</label>
+                <input type="text" class="form-control mb-3" id="points" placeholder="100"></input>
+                
+                <label for="group">Assignemnt Group</label>
+                <select id="group" class="form-control mb-3">
+                    <option value="assignments">ASSIGNMENTS</option>
+                </select>
+
+                <label for="display">Display Grade as</label>
+                <select id="display" class="form-control mb-3">
+                    <option value="percentage">Percentage</option>
+                </select>
+
+                <label for="type">Submission Type</label>
+                <select id="type" class="form-control mb-3">
+                    <option value="online">Online</option>
+                </select>
+
+                <label for="entry-options">Online Entry Options</label>
+                    <ul id="entry-options" class="list-group mb-3">
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox"  id="text-entry">
+                          <label class="form-check-label" for="text-entry">Text Entry</label>
+                        </li>
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox" id="url">
+                          <label class="form-check-label" for="url">Website URL</label>
+                        </li>
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox"  id="recording">
+                          <label class="form-check-label" for="recording">Media Recordings</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox"  id="annotation">
+                            <label class="form-check-label" for="annotation">Student Annotation</label>
+                          </li>
+                          <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" id="uploads">
+                            <label class="form-check-label" for="uploads">File Uploads</label>
+                          </li>
+                      </ul>
+                    
+                   
+                      <label for="attemps">Submission Attemps</label>
+                      <select id="attemps" class="form-control mb-3">
+                          <option value="online">Unlimited</option>
+                      </select>
+
+                      <label for="plagiarism-review">Plagiarism Review</label>
+                      <select id="plagiarism-review" class="form-control mb-3">
+                          <option value="online">None</option>
+                      </select>
+                
+                      <label for="group-assgn-label">Group Assignment</label>
+                    <ul id="group-assgn-label" class="list-group mb-3">
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox"  id="group-assgn">
+                          <label class="form-check-label" for="group-assgn">This is a group Assignment</label>
+                        </li>
+                    </ul>
+                
+                    <label for="peer-review-label">Peer Reviews</label>
+                    <ul id="peer-review-label" class="list-group mb-3">
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox"  id="peer-review">
+                          <label class="form-check-label" for="peer-review">Require Peer Reviews</label>
+                        </li>
+                    </ul>
+
+                <label for="assign" class="float-start">Assign</label>
+                <div id="assign" class="card assign-box py-3 px-3 mb-3">
+                    <label for="assign-to">Assign to</label>
+                    <input id="assign-to" class="form-control mb-3" type="text" placeholder="Everyone" name="assign-to" />
+                    <label for="due">Due</label>
+                    <input id="due" class="form-control mb-3" type="date" name="due-date"/>
+                    <div class="row ">
+                        <div class="col">
+                    <label for="avail-from">Available from</label>
+                    <input id="avail-from" class="form-control  mb-3" type="date" name="available-from"/>
+                    </div>
+                    <div class="col">
+                    <label for="avail-until">Available until</label>
+                    <input id="avail-until" class="form-control  mb-3" type="date" name="available-until"/>
+                </div>
+                    </div>
+            
+                           
+              
+            </div>
+        </div>
+            <hr/>
+            <input type="checkbox" id="change" class="mx-2 ">
+            <label for="change">Notify users that this content has changed</label>
+            
+            <div class="btn btn-danger float-end mx-2 my-2 ">Save</div>
+            <div class="btn btn-light float-end mx-2 my-2">Cancel</div>
+        
+    </body>
+</html>

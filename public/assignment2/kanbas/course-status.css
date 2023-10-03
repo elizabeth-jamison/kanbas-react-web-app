@@ -1,0 +1,115 @@
+.icons {
+    margin-right: 5px;
+}
+
+.name {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.status-col {
+    width: 250px;
+    text-align: left;
+    margin: 0px;
+}
+
+.col-status {
+    width: 250px;
+    margin: 0px;
+}
+
+.course-status-links {
+    text-decoration: none;
+    color: black;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.button {
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.select-buttons {
+    margin-bottom: 5px;
+}
+
+.todo {
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    width: 100px;
+}
+
+.todo-height {
+    height: 15px;
+}
+
+.assignment-name {
+    font-size: 16px;
+    color: #C92030; 
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.assignment-description {
+    font-size: 12px;
+    color: grey; 
+    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-left: 33px;
+}
+
+.assignment {
+    height: 50px;
+}
+
+.assignment-icon {
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 3px;
+    color: #C92030; 
+}
+
+.x-icon {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.calendar {
+    text-decoration: none;
+    color: #C92030; 
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.coming-up {
+    height: 35px;
+}
+
+.todo-item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.todo-title {
+    color: #C92030; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.todo-description {
+    color: gray;
+    margin-top:0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+

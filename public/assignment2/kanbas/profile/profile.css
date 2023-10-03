@@ -1,0 +1,49 @@
+.table-padding {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-heading {
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-top: 3px;
+    margin-left: 25px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font: sans-serif;
+}
+
+.links { 
+    color: #C92030;
+    text-decoration: none;
+}
+
+.name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.edit-button {
+    border: none;
+}
+
+.h1 {
+    font-family:  Helvetica, Arial, sans-serif;
+    margin-top: 10px;
+}
+
+.font-family {
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
+.profile-name {
+    color: black;
+}

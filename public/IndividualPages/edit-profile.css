@@ -1,0 +1,49 @@
+.table-padding {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-heading {
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-top: 3px;
+    margin-left: 25px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font: sans-serif;
+}
+
+.input-label {
+    margin-bottom: 1px;
+    margin-top: 15px;
+}
+
+.input-field {
+    width: 250px;
+}
+
+.links { 
+    color: #C92030;
+    text-decoration: none;
+}
+
+.cancel {
+    background-color: #f2f0f0; 
+    margin: 3px;
+}
+
+.save-profile {
+    background-color: #C92030; 
+    color: white;
+    margin: 3px;
+}
+
+
+
+

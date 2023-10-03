@@ -1,0 +1,68 @@
+.nav-bar {
+    width: 85px;
+    height: 2000px;
+    background-color: black;
+    vertical-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+}
+
+.nav-box {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-bar .active{
+    background-color: white;
+    color: #C92030;
+}
+
+.nav-box .active{
+    color: #C92030;
+}
+
+.profile-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: #C92030;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+.kanbas-nav-links {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
+
+.dashboard-link {
+    text-decoration: none;
+    color: #C92030;  
+}
+
+.nav-col {
+    width: 85px;
+    margin: 0px;
+}
+

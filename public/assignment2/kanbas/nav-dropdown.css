@@ -1,0 +1,19 @@
+.links {
+    text-decoration: none;
+    color: #C92030;
+    border: 0px;
+}
+
+.name {
+    padding-left: 15px;
+}
+
+.x {
+    height: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.arrow {
+    color: grey;
+}

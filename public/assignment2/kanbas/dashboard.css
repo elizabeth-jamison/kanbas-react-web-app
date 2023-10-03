@@ -1,0 +1,99 @@
+.card-img-size {
+    height: 175px;
+}
+
+.published-courses {
+    padding-left: 40px;
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
+.heading {
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
+.course1 {
+    background-color: blue;
+}
+.course2 {
+    background-color: rgb(0, 30, 255);
+}
+.course3 {
+    background-color: rgb(0, 60, 255);
+}
+.course4 {
+    background-color: rgb(0, 90, 255);
+}
+.course5 {
+    background-color: rgb(0, 120, 255);
+}
+.course6 {
+    background-color: rgb(0, 150, 255);
+}
+.course7 {
+    background-color: rgb(0, 180, 255);
+}
+.course8 {
+    background-color: rgb(0, 210, 255);
+}
+
+.course1-name {
+    color: blue;
+    font-weight: bold;
+    margin: 0px;
+}
+.course2-name {
+    color: rgb(0, 30, 255);
+    font-weight: bold;
+    margin: 0px;
+}
+.course3-name {
+    color: rgb(0, 60, 255);
+    font-weight: bold;
+    margin: 0px;
+}
+.course4-name {
+    color: rgb(0, 90, 255);
+    font-weight: bold;
+    margin: 0px;
+}
+.course5-name {
+    color: rgb(0, 120, 255);
+    font-weight: bold;
+    margin: 0px;
+}
+.course6-name {
+    color: rgb(0, 150, 255);
+    font-weight: bold;
+    margin: 0px;
+}
+.course7-name {
+    color: rgb(0, 180, 255);
+    font-weight: bold;
+    margin: 0px;
+}
+.course8-name {
+    color: rgb(0, 210, 255);
+    font-weight: bold;
+    margin: 0px;
+}
+
+.course-card {
+    padding: 15px;
+}
+
+.second-header {
+    color: #6c757d;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.third-header {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0px;
+    margin-bottom: 2px;
+}
+
+.card-nav {
+    text-decoration: none;
+}

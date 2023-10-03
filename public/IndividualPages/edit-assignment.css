@@ -1,0 +1,38 @@
+.assignments {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #C92030; 
+
+}
+
+.float-padding {
+   height: 50px;
+}
+
+.publish {
+    color: green;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.publish-icon {
+    color: green;
+    margin-top: 14px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.assn-name {
+    margin-top: 50px;
+}
+
+.description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.assign-box {
+    border: 1px grey solid;
+    margin-left: 70px;
+}
