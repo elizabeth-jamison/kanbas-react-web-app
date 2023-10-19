@@ -1,0 +1,53 @@
+.card-img-size {
+    height: 175px;
+}
+
+.published-courses {
+    padding-left: 40px;
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
+.heading {
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
+.course1 {
+    background-color: rgb(0, 150, 255);
+    text-decoration: none;
+}
+
+.course1-name {
+    color: rgb(0, 150, 255);
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: var(--bs-card-title-spacer-y);
+}
+
+.course-card {
+    height: 300px;
+    width: 200px;
+    text-decoration: none;
+}
+
+.second-header {
+    color: #6c757d;
+    font-size: 16px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.third-header {
+    color: #6c757d;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav-style {
+    text-decoration: none;
+}
+
+.card-style {
+    width:275px;
+    height:225px;
+    margin-left: 20px;
+}

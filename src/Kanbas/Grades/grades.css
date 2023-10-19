@@ -1,0 +1,56 @@
+.import-export {
+    height: 50px;
+}
+
+.search-labels {
+    font-weight: bold;
+
+}
+
+.col {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.filters {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.table-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.student-name {
+    font-weight: bold;
+}
+
+.name {
+    color: #C92030;
+
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: var(--bs-table-striped-bg);
+}
+
+.input {
+    border: 1px #C92030 solid;
+    width: 60px;
+    margin-right: 2px;
+    padding-right: 0px;
+}
+
+.file {
+    margin-top: 7px;
+    margin-left: 0px;
+}
+
+.center-items{
+    justify-content: center;
+    text-align: center;
+}

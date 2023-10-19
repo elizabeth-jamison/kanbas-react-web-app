@@ -1,0 +1,84 @@
+.nav-bar {
+    width: 85px;
+    height: 850px;
+    background-color: black;
+    vertical-align: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.nav-box {
+    width: 85px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: black;
+    text-align: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
+.nav-box.active {
+    width: 85px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: white;
+    text-align: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
+
+.profile-box {
+    width: 85px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: #C92030;
+    color: white;
+    text-align: center;
+}
+
+.kn-links {
+    width: 85px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.kn-links.active {
+    width: 85px;
+    color: #C92030;
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.kn-icon {
+    width: 85px;
+    color: #C92030;  
+    margin-top: 10px;
+}
+
+.kn-icon.active {
+    width: 85px;
+    background-color: white;
+    color: #C92030;  
+    margin-top: 10px;
+}
+
+.kn-icon.account {
+    width: 85px;
+    color: grey;  
+    margin-top: 10px;
+}

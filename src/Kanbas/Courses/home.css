@@ -1,0 +1,139 @@
+.plus {
+    margin-right: 5px;
+}
+
+.button-padding {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+
+.table-padding {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-name {
+    margin-left: 20px;
+    text-decoration: none;
+    margin-top: 3px;
+    text-decoration: none;
+}
+
+.profile {
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #C92030;
+    text-decoration: none;
+}
+
+.row-padding {
+    margin-top : 75px;
+}
+
+.profile-nav {
+    text-decoration: none;
+    color: black;
+}
+
+.module-heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 18px;
+    margin-right: 18px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.module-element-name {
+    padding-left: 40px; 
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.module-element-title {
+    padding-left: 10px; 
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.module-link{
+    padding-left: 10px; 
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.links {
+    text-decoration: none;
+}
+
+
+
+
+.link-icon {
+    color: white;
+    margin-right: 10px;
+}
+
+.green-border {
+    border-left: 3px green solid;
+}
+
+.module {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.elipsis {
+    margin-top: 12px;
+    color: #6c757d;
+}
+
+.plus-header {
+    margin-right: 20px;
+    margin-top: 12px;
+    color: #6c757d;
+}
+
+.check {
+    margin-top: 12px;
+    margin-right: 20px;
+}
+
+.student-view {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.search {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.edit {
+    margin-left: 20px;
+    margin-top: 11px;
+    color: green;
+}
+
+.assignment-name {
+    padding-left: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.assignment-description {
+    padding-left: 20px;
+    color: grey;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
