@@ -3,12 +3,11 @@ import db from "../Database";
 import './course-nav.css';
 import {FaEyeSlash} from "react-icons/fa";
 
-function CourseNavigation() {
+function CourseNavigation({course}) {
   const links = ["Home", "Modules", "Piazza", "Zoom Meetings", "Assignments", "Quizzes", "Grades",
                 "People", "Panopto Video", "Discussions", "Announcements", "Pages", "Files", 
                 "Rubrics", "Outcomes", "Collaborations", "Syllabus", "Settings"];
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
   return (
     <div className="list" style={{width:200}}>

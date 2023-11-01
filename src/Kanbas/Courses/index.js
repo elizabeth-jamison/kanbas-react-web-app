@@ -12,11 +12,12 @@ import './home.css';
 import CourseStatus from "./CourseStatus";
 import CourseHeader from "./header";
 import "./module-dropdown.css";
+import CreateAssignment from "../Assignments/AssignmentEditor/create";
 
-function Courses() {
+function Courses({ courses, course }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
+  console.log("course in courses: " + course.name)
   return (
     <div >
       <div className="row no-gutters ">
@@ -24,11 +25,11 @@ function Courses() {
           <KanbasNavigation />
         </div>
         <div className="col ">
-          <CourseHeader className="d-none d-md-block" />
+          <CourseHeader course={course} className="d-none d-md-block" />
           <hr className="mb-0" />
           <div className="row no-gutters  mt-0 mb-0 ms-0 me-0 ">
             <div className="d-none d-lg-block col-3 list ms-0" style={{ width: 200 }}>
-              <CourseNavigation  />
+              <CourseNavigation course={course}/>
             </div>
             <div className="col ms-0">
               <Routes>
@@ -37,6 +38,7 @@ function Courses() {
                 <Route path="Modules" element={<Modules />} />
                 <Route path="Assignments" element={<Assignments />} />
                 <Route path="AssignmentEditor/:assignmentId/*" element={<AssignmentEditor />} />
+                <Route path="CreateAssignment" element={<CreateAssignment />} />
                 <Route path="Grades" element={<Grades />} />
               </Routes>
             </div>

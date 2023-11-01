@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../Database";
+import { useSelector, useDispatch } from "react-redux";
 import { FaPlus, FaEllipsisV, FaEdit, FaCheckCircle, FaGripVertical } from "react-icons/fa";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "./assignmentReducer";
 import './assignments.css';
+
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
+  const assignments = useSelector((state) => state.assignmentReducer.assignments);
+  console.log("assignment: " + assignments);
+  const dispatch = useDispatch();
   return (
     <div >
       <div className="row mt-4 mb-0" >
@@ -24,12 +33,14 @@ function Assignments() {
                 Group
               </div>
             </div>
-            <div className="btn btn-danger button-padding " style={{ width: 135, height: 40 }}>
+            <Link to={`/Kanbas/Courses/${courseId}/CreateAssignment`}
+              onClick={() => dispatch(setAssignment({title: "New Assignment"}))}
+              className="btn btn-danger button-padding " style={{ width: 135, height: 40 }}>
               <div className="d-flex">
                 <div className="me-2"><FaPlus /></div>
                 Assignment
               </div>
-            </div>
+            </Link>
             <div className="btn btn-light button-padding " style={{ width: 40, height: 40 }}>
               <div className="d-flex">
                 <div ><FaEllipsisV /></div>
@@ -49,12 +60,13 @@ function Assignments() {
           <div className="float-end plus-header mt-2"><FaPlus /></div>
           <p className="float-end percent mt-2"> 40% of Total</p>
         </div>
-        {courseAssignments.map((assignment) => (
+        {assignments.filter((assignment) => assignment.course === courseId).map((assignment, index) => (
           <div className="green-border">
             <li className="list-group-item bg-white" style={{ height: 75 }}>
               <Link
                 key={assignment._id}
                 to={`/Kanbas/Courses/${courseId}/AssignmentEditor/${assignment._id}`}
+                onClick={() => dispatch(setAssignment(assignment))}
                 className=" ">
                 <div className="d-flex float-start">
                   <div className="elipsis mx-0"><FaGripVertical /></div>
@@ -67,6 +79,8 @@ function Assignments() {
                 </div>
                 <div className="elipsis float-end"><FaEllipsisV /></div>
                 <div className="check float-end"><FaCheckCircle /></div>
+                <div className="btn btn-secondary float-end mt-2 me-4"
+                  onClick={(e) => {e.preventDefault(); dispatch(deleteAssignment(assignment._id))}}>Delete</div>
               </Link>
             </li>
           </div>

@@ -5,11 +5,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { FaCheckCircle, FaEllipsisV } from "react-icons/fa";
 import './edit-assignment.css';
 import {
+  addAssignment,
+  deleteAssignment,
   updateAssignment,
   setAssignment,
 } from "../assignmentReducer";
-import { setModule } from "../../Modules/modulesReducer";
-function AssignmentEditor() {
+
+function CreateAssignment() {
   const { pathname } = useLocation();
   const { courseId } = useParams();
   const { assignmentId } = useParams();
@@ -18,8 +20,8 @@ function AssignmentEditor() {
   const assignment = useSelector((state) => state.assignmentReducer.assignment);
   const [title, setTitle] = useState("Assignment Name");
   const [description, setDescription] = useState("Assignment Description");
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleSave = () => {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
@@ -40,9 +42,10 @@ function AssignmentEditor() {
       <div className="container ">
         <label className="assn-name" for="assignment-name">Assignment Name:</label>
         <input type="text" className="form-control" id="assignment-name" value={assignment.title}
-          onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value, _id: assignmentId }))} />
+          onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value }))} />
 
-        <textarea className="form-control description" placeholder="This is the assignment description.">{description}</textarea>
+        <textarea className="form-control description" placeholder="This is the assignment description."
+          onChange={(e) => setDescription(e.target.value)} >{description}</textarea>
 
         <label for="points">Points</label>
         <input type="text" className="form-control mb-3" id="points" placeholder="100" />
@@ -79,7 +82,7 @@ function AssignmentEditor() {
         Cancel
       </Link>
       <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-        onClick={() => dispatch(updateAssignment(assignment))}
+       onClick={() => dispatch(addAssignment({ ...assignment, course: courseId }))}
         className="btn btn-light float-end mx-2 my-2">
         Save
       </Link>
@@ -88,4 +91,4 @@ function AssignmentEditor() {
 }
 
 
-export default AssignmentEditor;
+export default CreateAssignment;

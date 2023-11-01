@@ -3,10 +3,10 @@ import { useParams, useLocation } from "react-router";
 import db from "../Database";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import './home.css';
-function CourseHeader() {
+function CourseHeader({course}) {
   const { courseId, assignmentId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
+  console.log("course: " + course.name);
   return (
     <div className="col col-12 ">
       <div className="btn btn-light float-end student-view d-flex">
