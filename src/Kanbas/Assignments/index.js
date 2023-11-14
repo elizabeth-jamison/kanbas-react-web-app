@@ -1,20 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../Database";
 import { useSelector, useDispatch } from "react-redux";
 import { FaPlus, FaEllipsisV, FaEdit, FaCheckCircle, FaGripVertical } from "react-icons/fa";
 import {
-  addAssignment,
   deleteAssignment,
-  updateAssignment,
   setAssignment,
+  setAssignments
 } from "./assignmentReducer";
 import './assignments.css';
-
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+      );
+  }, [courseId]);
+
+  const handleDeleteAssignment = (assignmentId) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+
+
   const assignments = useSelector((state) => state.assignmentReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentReducer.assignment);
   console.log("assignment: " + assignments);
   const dispatch = useDispatch();
   return (
@@ -34,7 +48,7 @@ function Assignments() {
               </div>
             </div>
             <Link to={`/Kanbas/Courses/${courseId}/CreateAssignment`}
-              onClick={() => dispatch(setAssignment({title: "New Assignment"}))}
+              onClick={() => dispatch(setAssignment({ title: "New Assignment" }))}
               className="btn btn-danger button-padding " style={{ width: 135, height: 40 }}>
               <div className="d-flex">
                 <div className="me-2"><FaPlus /></div>
@@ -80,7 +94,7 @@ function Assignments() {
                 <div className="elipsis float-end"><FaEllipsisV /></div>
                 <div className="check float-end"><FaCheckCircle /></div>
                 <div className="btn btn-secondary float-end mt-2 me-4"
-                  onClick={(e) => {e.preventDefault(); dispatch(deleteAssignment(assignment._id))}}>Delete</div>
+                  onClick={(e) => {e.preventDefault(); handleDeleteAssignment(assignment._id)}}>Delete</div>
               </Link>
             </li>
           </div>

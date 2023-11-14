@@ -9,6 +9,7 @@ import {
   setAssignment,
 } from "../assignmentReducer";
 import { setModule } from "../../Modules/modulesReducer";
+import * as client from "../client";
 function AssignmentEditor() {
   const { pathname } = useLocation();
   const { courseId } = useParams();
@@ -24,6 +25,11 @@ function AssignmentEditor() {
   const handleSave = () => {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
+
   return (
     <div className="">
       <div className="d-flex float-padding float-end mt-2" >
@@ -79,7 +85,7 @@ function AssignmentEditor() {
         Cancel
       </Link>
       <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-        onClick={() => dispatch(updateAssignment(assignment))}
+        onClick={handleUpdateAssignment}
         className="btn btn-light float-end mx-2 my-2">
         Save
       </Link>

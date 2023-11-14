@@ -31,7 +31,7 @@ function Dashboard(
                             onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
                         <input value={course.endDate} className="form-control mx-1" type="date" style={{ width: 350 }}
                             onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
-                        <div onClick={addNewCourse} className="btn btn-danger mx-1">
+                        <div onClick={(e) => {e.preventDefault(); addNewCourse(course)}} className="btn btn-danger mx-1">
                             Add
                         </div>
                         <div onClick={updateCourse} className="btn btn-secondary mx-1">
@@ -42,7 +42,7 @@ function Dashboard(
 
                 <div className=" card-deck d-flex flex-row flex-wrap ">
                     {courses.map((course) => (
-                        <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="nav-style me-2"
+                        <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="nav-style me-2 mb-5"
                             onClick={() => {setCourse(course); console.log("course name in dashboard: " + course.name)}}>
                             <div className="flex-wrap course-card my-3 mx-3" style={{ width: 275 }}>
                                 <div className="card card-style me-2" >

@@ -6,10 +6,9 @@ import { FaCheckCircle, FaEllipsisV } from "react-icons/fa";
 import './edit-assignment.css';
 import {
   addAssignment,
-  deleteAssignment,
-  updateAssignment,
   setAssignment,
 } from "../assignmentReducer";
+import * as client from "../client";
 
 function CreateAssignment() {
   const { pathname } = useLocation();
@@ -23,6 +22,11 @@ function CreateAssignment() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const handleAddAssignment= () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
   const handleSave = () => {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
@@ -82,7 +86,7 @@ function CreateAssignment() {
         Cancel
       </Link>
       <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-       onClick={() => dispatch(addAssignment({ ...assignment, course: courseId }))}
+       onClick={handleAddAssignment}
         className="btn btn-light float-end mx-2 my-2">
         Save
       </Link>
