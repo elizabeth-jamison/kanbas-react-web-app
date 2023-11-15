@@ -1,5 +1,5 @@
 import axios from "axios";
-const COURSES_URL = "http://localhost:4000/api/courses";
+const COURSES_URL = `${API_BASE}/courses`;
 
 export const updateCourse = async (course) => {
     const response = await axios.put(
