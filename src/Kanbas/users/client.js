@@ -4,7 +4,7 @@ const request = axios.create({
   withCredentials: true,
 });
 
-export const BASE_API = process.env.REACT_APP_BASE_API;
+export const BASE_API = process.env.REACT_APP_API_BASE;
 export const USERS_API = `${BASE_API}/users`;
 
 export const signin = async (credentials) => {
