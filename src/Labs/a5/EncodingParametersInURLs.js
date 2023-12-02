@@ -19,7 +19,8 @@ function EncodingParametersInURLs() {
 
   const [welcome, setWelcome] = useState("");
   const fetchWelcome = async () => {
-    const response = await axios.get("${URL}/a5/welcome");
+    console.log("URL: " + URL);
+    const response = await axios.get(`${URL}/a5/welcome`);
     setWelcome(response.data);
   };
   useEffect(() => {

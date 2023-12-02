@@ -12,7 +12,7 @@ function WorkingWithObjects() {
     const API_BASE = process.env.REACT_APP_API_BASE;
     const URL = `${API_BASE}/a5`;
     const fetchAssignment = async () => {
-        const response = await axios.get(`${URL}/assignments`);
+        const response = await axios.get(`${URL}/assignment`);
         setAssignment(response.data);
     };
     const updateTitle = async () => {

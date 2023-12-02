@@ -73,10 +73,11 @@ function Kanbas() {
         <KanbasNavigation className="d-none d-md-block" />
         <div>
           <Routes>
-            <Route path="/signin" element={<Signin />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/admin/users" element={<UserTable />} />
-            <Route path="Account" element={<Account />} />
+            <Route path="/account/signin" element={<Signin />} />
+            <Route path="/account/signup" element={<Signup />} />
+            <Route path="/account/admin/users" element={<UserTable />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/account/:username" element={<Account />} />
             <Route path="Dashboard" element={
               <Dashboard
                 courses={courses}

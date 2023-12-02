@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import * as client from "./client";
 import { FaPlusCircle, FaTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
 function UserTable() {
     const [users, setUsers] = useState([]);
+    const [error, setError] = useState("");
+    
     const fetchUsers = async () => {
         const users = await client.findAllUsers();
         setUsers(users);
@@ -12,24 +15,27 @@ function UserTable() {
         try {
             const newUser = await client.createUser(user);
             setUsers([newUser, ...users]);
+            setUser({ username: "", password: "", firstName: "", lastName: "", role: "USER" });
         } catch (err) {
-            console.log(err);
+            setError(err);
         }
     };
     const selectUser = async (user) => {
         try {
-            const u = await client.findUserById(user._id);
+            console.log("user: " + JSON.stringify(user));
+            const u = await client.findUserByUsername(user.username);
             setUser(u);
         } catch (err) {
-            console.log(err);
+            setError(err);
         }
     };
     const updateUser = async () => {
         try {
             const status = await client.updateUser(user);
             setUsers(users.map((u) => (u._id === user._id ? user : u)));
+            setUser({ username: "", password: "", firstName: "", lastName: "", role: "USER" });
         } catch (err) {
-            console.log(err);
+            setError(err);
         }
     };
     const deleteUser = async (user) => {
@@ -37,7 +43,7 @@ function UserTable() {
             await client.deleteUser(user);
             setUsers(users.filter((u) => u._id !== user._id));
         } catch (err) {
-            console.log(err);
+            setError(err);
         }
     };
 
@@ -58,17 +64,21 @@ function UserTable() {
                             </tr>
                             <tr>
                                 <td>
-                                    <input value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })} />
-                                    <input value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })} />
+                                    <div className="d-flex">
+                                        <input className="form-control me-2" placeholder="Username" value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })} />
+                                        <input className="form-control " placeholder="Password" value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })} />
+                                    </div>
                                 </td>
                                 <td>
-                                    <input value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })} />
+                                    <input className="form-control " placeholder="First Name" value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })} />
                                 </td>
                                 <td>
-                                    <input value={user.lastName} onChange={(e) => setUser({ ...user, lastName: e.target.value })} />
+                                    <input className="form-control " placeholder="Last Name" value={user.lastName} onChange={(e) => setUser({ ...user, lastName: e.target.value })} />
                                 </td>
                                 <td>
-                                    <select value={user.role} onChange={(e) => setUser({ ...user, role: e.target.value })}>
+                                    <select value={user.role} 
+                                        className="form-control mt-0"
+                                        onChange={(e) => setUser({ ...user, role: e.target.value })}>
                                         <option value="USER">User</option>
                                         <option value="ADMIN">Admin</option>
                                         <option value="FACULTY">Faculty</option>
@@ -76,7 +86,7 @@ function UserTable() {
                                     </select>
                                 </td>
                                 <td>
-                                    <FaPlusCircle onClick={createUser} className="me-2 fs-1 text-primary" />
+                                    <FaPlusCircle onClick={createUser} className="me-2 fs-1  mt-0 text-primary" />
                                     <FaCheckCircle onClick={updateUser}
                                         className="me-2 text-success fs-1 text" />
                                 </td>
@@ -85,9 +95,13 @@ function UserTable() {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* {users.map((user) => (
+                            {users.map((user) => (
                                 <tr key={user._id}>
-                                <td>{user.username}</td>
+                                <td>        
+                                    <Link style={{textDecoration:"none"}} to={`/Kanbas/account/${user.username}`}>
+                                    {user.username}
+                                    </Link>
+                                    </td>
                                 <td>{user.firstName}</td>
                                 <td>{user.lastName}</td>
                                 <td className="text-nowrap">
@@ -98,7 +112,7 @@ function UserTable() {
                                         <FaPencilAlt onClick={() => selectUser(user)} />
                                     </button>
                                 </td>
-                                </tr>))} */}
+                                </tr>))}
                         </tbody>
                     </table>
                 </div>
